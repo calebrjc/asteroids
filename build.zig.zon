@@ -1,0 +1,21 @@
+.{
+    .name = "asteroids",
+    .version = "0.0.1",
+
+    // .minimum_zig_version = "0.13.0",
+
+    .dependencies = .{
+        .sge = .{
+            .url = "https://github.com/calebrjc/sge/archive/cbb342b466d35cf7bd0fa0a904d7df1e4a82f009.tar.gz",
+            .hash = "12209eaafa1db576f8310fa0b65fe795dfbcd3c14aae3027f48939533941b76236aa",
+        },
+    },
+
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "src",
+        "LICENSE",
+        "README.md",
+    },
+}
