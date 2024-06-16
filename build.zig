@@ -4,7 +4,7 @@ pub fn build(b: *std.Build) void {
     const target = b.standardTargetOptions(.{});
     const optimize = b.standardOptimizeOption(.{});
 
-    const sge = b.dependency("sge", .{ .target = target, .optimize = optimize });
+    const zge = b.dependency("zge", .{ .target = target, .optimize = optimize });
 
     const exe = b.addExecutable(.{
         .name = "asteroids",
@@ -12,7 +12,7 @@ pub fn build(b: *std.Build) void {
         .target = target,
         .optimize = optimize,
     });
-    exe.root_module.addImport("sge", sge.module("sge"));
+    exe.root_module.addImport("zge", zge.module("zge"));
     b.installArtifact(exe);
 
     // "zig build run" -----------------------------------------------------------------------------
