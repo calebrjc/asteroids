@@ -1,0 +1,3 @@
+[submodule "lib/zge"]
+	path = lib/zge
+	url = git@github.com:calebrjc/zge.git
